@@ -24,11 +24,11 @@ use Illuminate\Support\Facades\Route;
 //     }
 // })->middleware('auth');
 
-Route::get('/', [PhotoController::class,'index'])->middleware('auth');
+Route::get('/', [PhotoController::class, 'index'])->middleware('auth');
 
 
 
-Route::get('/dashboard', [PhotoController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [PhotoController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 
 
@@ -39,14 +39,14 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::post('/save-photo',[PhotoController::class,'storePhoto']);
-Route::get('/all-users/{user}',[UserController::class,'show']);
-Route::get('/photos/manage',[PhotoController::class,'manage']);
+Route::post('/save-photo', [PhotoController::class, 'storePhoto']);
+Route::get('/all-users/{user}', [UserController::class, 'show']);
+Route::get('/photos/manage', [PhotoController::class, 'manage']);
 
 
-Route::middleware(['auth','sudhuadminallowed'])->group(function () {
-    Route::get('/admin', [PhotoController::class,'index'])->name('admin');
-    Route::get('/all-users', [UserController::class,'index'])->name('users');
+Route::middleware(['auth', 'sudhuadminallowed'])->group(function () {
+    Route::get('/admin', [PhotoController::class, 'index'])->name('admin');
+    Route::get('/all-users', [UserController::class, 'index'])->name('users');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
