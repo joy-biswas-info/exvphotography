@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.ssh_password }}
           port: 65002
           script: |
-            cd /home/u192341568/domains/creativejps.com/public_html/dashboard
+            cd /home/u192341568/domains/exvphotography.com/public_html/dashboard
             php artisan down
             cp .env.example .env
             php artisan key:generate
