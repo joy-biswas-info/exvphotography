@@ -18,7 +18,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: 31.170.160.185
+          server: 154.56.47.209
           username: u192341568.exv
           password: ${{ secrets.ftp_password }}
         # Only for database, vendor, node_modules
@@ -26,7 +26,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           username: u192341568
-          host: 31.170.160.185
+          host: 154.56.47.209
           password: ${{ secrets.ssh_password }}
           port: 65002
           script: |
