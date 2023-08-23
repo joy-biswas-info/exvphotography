@@ -20,7 +20,7 @@
 <body class="font-sans text-gray-900 antialiased">
     @include('layouts.gust_navigation')
 
-    <div class="min-h-screen pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+    <div class="min-h-screen pt-6 sm:pt-0 bg-gray-900 dark:bg-gray-900">
         <div class="flex items-center justify-center flex-wrap md:flex-nowrap lg:flex-nowrap">
             <div class="bg-cover w-full">
 
